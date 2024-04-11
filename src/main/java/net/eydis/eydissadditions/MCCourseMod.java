@@ -1,6 +1,9 @@
 package net.eydis.eydissadditions;
 
 import com.mojang.logging.LogUtils;
+import net.eydis.eydissadditions.block.ModBlocks;
+import net.eydis.eydissadditions.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,6 +28,9 @@ public class MCCourseMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -42,6 +48,16 @@ public class MCCourseMod
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            //Item 1
+            event.accept(ModItems.ONIXSTONE);
+            //Item 2
+            event.accept(ModItems.ONIXORE);
+        }
+        if(event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS) {
+            //Block 1
+            event.accept(ModBlocks.ONYXBLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
