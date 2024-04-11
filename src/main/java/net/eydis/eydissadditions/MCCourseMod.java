@@ -52,11 +52,13 @@ public class MCCourseMod
             //Item 1
             event.accept(ModItems.ONIXSTONE);
             //Item 2
-            event.accept(ModItems.ONIXORE);
+            //event.accept(ModItems.ONIXORE);
         }
         if(event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS) {
             //Block 1
             event.accept(ModBlocks.ONYXBLOCK);
+            //Block 2
+            event.accept(ModBlocks.ONYXORE);
         }
     }
 

@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "eydissadditions:item/onyxore"
+  "parent": "eydissadditions:block/onyxore"
   }
 }
