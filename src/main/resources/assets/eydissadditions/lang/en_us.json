@@ -1,6 +1,9 @@
 {
-  "item.eydissadditions.onyxstone": "Onyxstone",
+  "item.eydissadditions.purpuronyxstone": "Purpuronyxstone",
+  "item.eydissadditions.raw_purpuronyxstone": "Raw Purpuronyxstone",
 
-  "block.eydissadditions.onyxore": "Onyxore",
-  "block.eydissadditions.onyxblock": "Block of Onyx"
+  "block.eydissadditions.purpuronyxstone_ore": "Purpuronyxstone Ore",
+  "block.eydissadditions.purpuronyxstoneblock": "Block of Purpuronyxstone",
+
+  "creativetab.course_tab": "Course Tab"
 }

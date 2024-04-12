@@ -2,6 +2,7 @@ package net.eydis.eydissadditions;
 
 import com.mojang.logging.LogUtils;
 import net.eydis.eydissadditions.block.ModBlocks;
+import net.eydis.eydissadditions.item.ModCreativeModeTabs;
 import net.eydis.eydissadditions.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,6 +29,7 @@ public class MCCourseMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -50,15 +52,15 @@ public class MCCourseMod
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             //Item 1
-            event.accept(ModItems.ONIXSTONE);
+            event.accept(ModItems.PURPURONYXSTONE);
             //Item 2
-            //event.accept(ModItems.ONIXORE);
+            event.accept(ModItems.RAW_PURPURONYXSTONE);
         }
         if(event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS) {
             //Block 1
-            event.accept(ModBlocks.ONYXBLOCK);
+            event.accept(ModBlocks.PURPURONYXSTONEBLOCK);
             //Block 2
-            event.accept(ModBlocks.ONYXORE);
+            event.accept(ModBlocks.PURPURONYXSTONE_ORE);
         }
     }
 

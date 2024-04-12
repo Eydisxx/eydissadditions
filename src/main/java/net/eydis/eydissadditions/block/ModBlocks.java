@@ -18,10 +18,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MCCourseMod.MOD_ID);
     //Block 1
-    public static final RegistryObject<Block> ONYXBLOCK = registerBlock("onyxblock",
+    public static final RegistryObject<Block> PURPURONYXSTONEBLOCK = registerBlock("purpuronyxstoneblock",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
     //Block 2
-    public static final RegistryObject<Block> ONYXORE = registerBlock("onyxore",
+    public static final RegistryObject<Block> PURPURONYXSTONE_ORE = registerBlock("purpuronyxstone_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
 
     private static <T extends Block> RegistryObject <T> registerBlock(String name, Supplier<T> block) {
