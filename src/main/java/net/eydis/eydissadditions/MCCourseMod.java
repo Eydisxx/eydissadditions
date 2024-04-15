@@ -55,6 +55,8 @@ public class MCCourseMod
             event.accept(ModItems.PURPURONYXSTONE);
             //Item 2
             event.accept(ModItems.RAW_PURPURONYXSTONE);
+            //Item 3
+            event.accept(ModItems.TOOL_SHARPENER);
         }
         if(event.getTabKey()== CreativeModeTabs.BUILDING_BLOCKS) {
             //Block 1
