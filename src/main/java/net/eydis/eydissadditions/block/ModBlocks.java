@@ -2,11 +2,16 @@ package net.eydis.eydissadditions.block;
 
 import net.eydis.eydissadditions.MCCourseMod;
 import net.eydis.eydissadditions.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,9 +25,12 @@ public class ModBlocks {
     //Block 1
     public static final RegistryObject<Block> PURPURONYXSTONEBLOCK = registerBlock("purpuronyxstoneblock",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
-    //Block 2
+    //Block 2 + exp
     public static final RegistryObject<Block> PURPURONYXSTONE_ORE = registerBlock("purpuronyxstone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(3.0F, 3.0F).sound(SoundType.NETHER_GOLD_ORE), UniformInt.of(0, 1)));
+
+
 
     private static <T extends Block> RegistryObject <T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                     .displayItems((displayParameters, output) -> {
                         output.accept(ModItems.PURPURONYXSTONE.get());
                         output.accept(ModItems.RAW_PURPURONYXSTONE.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
 
                         output.accept(ModBlocks.PURPURONYXSTONEBLOCK.get());
                         output.accept(ModBlocks.PURPURONYXSTONE_ORE.get());
